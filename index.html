@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Home Solution - Request Free Estimate</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        label { display: block; margin-top: 10px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        button { background: #4CAF50; color: white; padding: 10px; border: none; width: 100%; margin-top: 15px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Best Home Solution</h1>
+    <p>Welcome! Request a free estimate or service call below. We'll get back to you soon to confirm details and get your address if needed.</p>
+    
+    <form action="https://formspree.io/f/xbjlpzwm" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="address">Address (optional - we can get this on callback):</label>
+        <input type="text" id="address" name="address">
+        
+        <label for="service">Service Description or Estimate Request:</label>
+        <textarea id="service" name="service" rows="4" required></textarea>
+        
+        <input type="hidden" name="_subject" value="New Service Request from Best Home Solution">  <!-- Custom email subject -->
+        <input type="hidden" name="_next" value="https://your-website.com/thanks.html">  <!-- Redirect after submit, optional -->
+        
+        <button type="submit">Submit Request</button>
+    </form>
+    
+    <p>After submission, you'll get an email with their details. Call them back to discuss and get any missing info like address.</p>
+</body>
+</html>
