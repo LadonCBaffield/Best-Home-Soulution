@@ -71,23 +71,20 @@
         <input type="hidden" name="_next" value="thanks.html"> <!-- Assumes you have thanks.html set up -->
         
         <button type="submit">Submit Request</button>
-<form 
-    action="https://formspree.io/f/xblppzww" method="POST">
-  <label for="priority">Priority Level:</label>
-  <select id="priority" name="priority" required>
-    <option value="">Select priority</option>
-    <option value="Low">Low (non-urgent)</option>
-    <option value="Medium">Medium</option>
-    <option value="High">High (emergency)</option>
-  </select>
-
-  <label for="preferred_time">Preferred Contact Time:</label>
-  <input type="text" id="preferred_time" name="preferred_time" placeholder="e.g., Weekdays after 5 PM">
-
-  <label for="service">Service Description or Estimate Request:</label>
-  <textarea id="service" name="service" rows="4" required placeholder="Please describe the issue or service needed"></textarea>
-
-  <button type="submit">Submit Request</button>
+<form
+  action="https://formspree.io/f/xblppzww"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
 </form>
 
     <p>After submission, you'll get an email with their details. Call them back to discuss and get any missing info like address.</p>
