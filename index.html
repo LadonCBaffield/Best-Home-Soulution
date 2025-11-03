@@ -71,22 +71,46 @@
         <input type="hidden" name="_next" value="thanks.html"> <!-- Assumes you have thanks.html set up -->
         
         <button type="submit">Submit Request</button>
-<form
-  action="https://formspree.io/f/xblppzww"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+        <form action="https://formspree.io/f/xblppzww" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="address">Address (optional):</label>
+  <input type="text" id="address" name="address">
+
+  <label for="service_type">Service Type:</label>
+  <select id="service_type" name="service_type" required>
+    <option value="">Select a service</option>
+    <option value="Siding">Siding</option>
+    <option value="Demolition">Demolition</option>
+    <option value="Cleanouts">Cleanouts</option>
+    <option value="Painting">Painting</option>
+    <option value="Gutter Cleaning">Gutter Cleaning</option>
+    <option value="Decks">Decks</option>
+    <option value="Flooring">Flooring</option>
+  </select>
+
+  <label for="priority">Priority Level:</label>
+  <select id="priority" name="priority" required>
+    <option value="">Select priority</option>
+    <option value="Low">Low (non-urgent)</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High (emergency)</option>
+  </select>
+
+  <label for="preferred_time">Preferred Contact Time:</label>
+  <input type="text" id="preferred_time" name="preferred_time" placeholder="e.g., Weekdays after 5 PM">
+
+  <label for="service">Service Description or Estimate Request:</label>
+  <textarea id="service" name="service" rows="4" required placeholder="Please describe the issue or service needed in detail."></textarea>
+
+  <button type="submit">Submit Request</button>
 </form>
 
-    <p>After submission, you'll get an email with their details. Call them back to discuss and get any missing info like address.</p>
-</body>
-</html>
+<p>After submission, you'll get an email with their details. Call them back to discuss and get any missing info like address.</p>
