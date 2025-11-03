@@ -71,8 +71,24 @@
         <input type="hidden" name="_next" value="thanks.html"> <!-- Assumes you have thanks.html set up -->
         
         <button type="submit">Submit Request</button>
-    </form>
-    
+ <form action="https://formspree.io/f/xblppzww" method="POST">
+  <label>
+    Name:
+    <input type="text" name="name" required>
+  </label>
+  <br>
+  <label>
+    Email:
+    <input type="email" name="email" required>
+  </label>
+  <br>
+  <label>
+    Message:
+    <textarea name="message" required></textarea>
+  </label>
+  <br>
+  <button type="submit">Send</button>
+
     <p>After submission, you'll get an email with their details. Call them back to discuss and get any missing info like address.</p>
 </body>
 </html>
